@@ -6,7 +6,7 @@ console.log('in console');
 // url='https://newsapi.org/v2/top-headlines?country=us&apiKey=bc21041aadb647919c82dd9ff4d9e731'
 let acc=document.getElementById('accordian');
 const xml = new XMLHttpRequest();
-xml.open('GET',`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=bc21041aadb647919c82dd9ff4d9e731`,true);
+xml.open('GET',`https://newsapi.org/v2/top-headlines?country=us&apiKey=bc21041aadb647919c82dd9ff4d9e731`,true);
 
 //! idr meny arrow function use kia to this.status deprecated a rha tha  
 //! ye kaam simple function sy hi hua
