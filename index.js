@@ -6,7 +6,7 @@ console.log('in console');
 // url='https://newsapi.org/v2/top-headlines?country=us&apiKey=bc21041aadb647919c82dd9ff4d9e731'
 let acc=document.getElementById('accordian');
 const xml = new XMLHttpRequest();
-xml.open('GET',`https://newsapi.org/v2/top-headlines?country=us&apiKey=bc21041aadb647919c82dd9ff4d9e731`,true);
+xml.open('GET',`https://fakerapi.it/api/v1/images?_width=380`,true);
 
 //! idr meny arrow function use kia to this.status deprecated a rha tha  
 //! ye kaam simple function sy hi hua
@@ -14,8 +14,8 @@ xml.onload= function(){
     let html='';
     if(this.status===200)
     {
-        let data=JSON.parse(this.responseText);
-        data.articles.forEach((element,index) => {
+        let data1=JSON.parse(this.responseText);
+        data1.data.forEach((element,index) => {
 
             html=`
             <div class="accordion my-2" id="accordionPanelsStayOpenExample">
@@ -27,9 +27,9 @@ xml.onload= function(){
                   </h2>
                   <div id="panelsStayOpen-collapse${index}" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-heading${index}">
                     <div class="accordion-body my-3">
-                        <div><img src="${element.urlToImage}" alt="news image" style="width:100%;height:22rem"> </div>
+                        <div><img src="${element.url}" alt="news image" style="width:100%;height:22rem"> </div>
                         </div>
-                    <div style="padding:25px"> To see the description click here <a href="${element.url}" target="_blank" style="text-decoration:none"> Read more </a></div>
+                    <div style="padding:25px"> To see the description click here <a href="#" target="_blank" style="text-decoration:none"> Read more </a></div>
                   </div>
                 </div>
   
