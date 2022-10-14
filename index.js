@@ -3,10 +3,10 @@ console.log('in console');
 // // bc21041aadb647919c82dd9ff4d9e731
 // // https://newsapi.org/v2/top-headlines?country=us&apiKey=bc21041aadb647919c82dd9ff4d9e731 
 
-// url='https://newsapi.org/v2/top-headlines?country=us&apiKey=bc21041aadb647919c82dd9ff4d9e731'
+let url='https://newsapi.org/v2/top-headlines?country=us&apiKey=bc21041aadb647919c82dd9ff4d9e731'
 let acc=document.getElementById('accordian');
 const xml = new XMLHttpRequest();
-xml.open('GET',`https://fakerapi.it/api/v1/images?_width=380`,true);
+xml.open('GET',url,true);
 
 //! idr meny arrow function use kia to this.status deprecated a rha tha  
 //! ye kaam simple function sy hi hua
